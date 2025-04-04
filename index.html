@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel Haanwinckel</title>
+  <!-- Google Fonts for a clean look -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: url("http://www.econ.ucla.edu/haanwinckel/header_background.png") no-repeat center;
+      background-size: cover;
+      color: #fff;
+      padding: 60px 20px; /* increased padding for a more prominent header */
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3.0em;
+      text-shadow: 4px 4px 2px rgba(0,0,0,0.6); /* Optional: improves readability on busy backgrounds */
+    }
+    .content {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      color: #132265;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    a {
+      text-decoration: none; /* Remove default underline */
+      color: #0070c9;      /* Link color, adjust as needed */
+    }
+    a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+    ul {
+      list-style: square inside;
+      padding-left: 20px;
+      font-size: 1.1em;
+    }
+    ul.first-level > li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    /* Nested bullet points: smaller font and stronger indentation */
+    ul ul {
+      font-size: 0.9em;
+      padding-left: 40px;
+      list-style: circle inside;
+    }
+    /* Bio container for image and text side by side */
+    .bio-container {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .bio-container img {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      margin-right: 20px;
+      /* Image remains rectangular */
+    }
+    .bio-text {
+      flex: 1;
+      min-width: 200px;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daniel Haanwinckel</h1>
+  </header>
+  <div class="content">
+    <!-- Biography section with picture -->
+    <section class="section">
+      <div class="bio-container">
+        <img src="https://economics.ucla.edu/wp-content/uploads/2020/07/haanwinckel-pic-e1699047658649-1030x1030.jpg" alt="Daniel Haanwinckel">
+        <div class="bio-text">
+          <p><strong>Assistant Professor</strong> — UCLA, Department of Economics</p>
+          <p><strong>Faculty Research Fellow</strong> — NBER, Labor Studies program</p>
+          <p><a href="http://www.econ.ucla.edu/haanwinckel/papers/CV_site.pdf" target="_blank">CV</a></p>
+          <p>Email: <a href="mailto:haanwinckel@econ.ucla.edu">haanwinckel@econ.ucla.edu</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Working Papers</h2>
+      <ul class="first-level">
+        <li>
+          <a href="http://www.econ.ucla.edu/haanwinckel/papers/SDIF_website.pdf" target="_blank">
+            Supply, Demand, Institutions, and Firms: A Theory of Labor Market Sorting and the Wage Distribution
+          </a>
+          <ul>
+            <li>Conditionally accepted, The American Economic Review <i>(contingent on data editor review)</i>.</li>
+            <li>
+              <a href="https://www.nber.org/papers/w31318" target="_blank">NBER Working Paper 31318</a>
+            </li>
+            <li>
+              Software packages for the task-based production function:
+              <a href="https://github.com/haanwinckel/TaskBasedProduction.jl" target="_blank">Julia</a>,
+              <a href="https://github.com/haanwinckel/TaskBasedProduction_matlab" target="_blank">Matlab</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://www.econ.ucla.edu/haanwinckel/papers/WageLevelsMinWage_Haanwinckel.pdf" target="_blank">
+            Does regional variation in wage levels identify the effects of a national minimum wage?
+          </a>
+          <ul>
+            <li>
+              <a href="https://arxiv.org/abs/2307.01284" target="_blank">arXiv:2307.01284</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://www.econ.ucla.edu/haanwinckel/papers/Taxation_August_2024_Base.pdf" target="_blank">
+            Taxation and Household Decisions: an Intertemporal Analysis
+          </a> (with <a href="https://sites.google.com/site/maryannbronson/" target="_blank">Mary Ann Bronson</a> and <a href="http://www.econ.ucla.edu/mazzocco/" target="_blank">Maurizio Mazzocco</a>)
+          <ul>
+            <li>
+              <a href="https://www.nber.org/papers/w32861" target="_blank">NBER Working Paper 32861</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Peer-reviewed Academic Publications</h2>
+      <ul class="first-level">
+        <li>
+          <a href="https://bfi.uchicago.edu/wp-content/uploads/BFI_WP_202045-1.pdf" target="_blank">
+            Workforce Composition, Productivity, and Labor Regulations in a Compensating Differentials Theory of Informality
+          </a> (with <a href="https://sites.google.com/view/rodrigo-r-soares/" target="_blank">Rodrigo R. Soares</a>)
+          <ul>
+            <li>              
+          <a href="https://academic.oup.com/restud/article/88/6/2970/6213913" target="_blank">
+            The Review of Economic Studies, Vol. 88, Issue 6, November 2021, pp. 2970–3010
+          </a>
+            </li>
+            <li>
+              Replication package:
+              <a href="https://zenodo.org/record/4287679" target="_blank">Zenodo</a> or
+              <a href="https://github.com/haanwinckel/HaanwinckelSoares2021" target="_blank">GitHub</a>
+            </li>
+            <li>
+              Media mentions:
+              <a href="https://exame.com/revista-exame/mais-estudo-e-menos-ilegalidade/" target="_blank">Revista Exame</a>,
+              <a href="https://www1.folha.uol.com.br/mercado/2020/09/desoneracao-da-folha-para-trabalhador-nao-qualificado-tem-mais-impacto-em-formalizacao.shtml" target="_blank">
+                Folha de São Paulo
+              </a>
+            </li>
+            <li>
+              <a href="https://faculti.net/workforce-composition-productivity-and-labour-regulations/" target="_blank">
+                Faculti video
+              </a> (for general audiences)
+            </li>
+            <li>
+              <a href="https://youtu.be/w4eojPqyDkA?t=464" target="_blank">
+                Recorded seminar presentation
+              </a> in Portuguese
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Other Publications</h2>
+      <ul class="first-level">
+        <li>
+          <a href="https://wol.iza.org/articles/fighting-employment-informality-with-schooling" target="_blank">
+            Fighting employment informality with schooling
+          </a> (with <a href="https://sites.google.com/view/rodrigo-r-soares/" target="_blank">Rodrigo R. Soares</a>).
+          <ul>
+            <li>
+              IZA World of Labor, 2017.
+            </li>
+            <li>
+              Policy-oriented article extending the discussion to other countries in Latin America.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Software</h2>
+      <ul class="first-level">
+        <li>
+          Packages for the task-based production function from “Supply, Demand, Institutions, and Firms”:
+          <ul>
+            <li>
+              <a href="https://github.com/haanwinckel/TaskBasedProduction.jl" target="_blank">Julia</a>
+            </li>
+            <li>
+              <a href="https://github.com/haanwinckel/TaskBasedProduction_matlab" target="_blank">Matlab</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://github.com/haanwinckel/ModelObjectTools.jl" target="_blank">ModelObjectTools.jl</a>:
+          A Julia package for manipulating “structs” that hold model parameters and/or choice variables in optimization procedures.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Selected Work in Progress</h2>
+      <ul class="first-level">
+        <li>
+          When the Matching Function Takes Sides: Model and Experimental Evidence from an Online Job Platform (with Caio Waisman and Navdeep Sahni)
+        </li>
+        <li>
+          Precautionary On-the-Job Search and Business Cycles (with Filipe Fiedler and Anthony Papac)
+        </li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
