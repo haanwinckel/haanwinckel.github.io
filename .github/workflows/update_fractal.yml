@@ -22,7 +22,7 @@ jobs:
         run: julia -e 'using Pkg; Pkg.instantiate()'
 
       - name: Run fractal generation script
-        run: julia fractal.jl
+        run: julia --project="." fractal.jl
 
       - name: Commit and push updated image
         env:
