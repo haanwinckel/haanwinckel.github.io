@@ -62,7 +62,7 @@ function is_interesting(grid, max_iter; entropy_thresh=3.0, gradient_thresh=0.5,
 end
 
 # Loop to search for an interesting window.
-function find_interesting_window(max_attempts=10000)
+function find_interesting_window(max_attempts=100000)
     max_iter = 300
     best_distance = -Inf
     best_window = (Inf, Inf, Inf, Inf)
@@ -72,7 +72,7 @@ function find_interesting_window(max_attempts=10000)
         x_low, x_high, y_low, y_high = -2.0, 0.5, 0.0, 1.0
         center = x_low + rand()*(x_high - x_low) + im*(y_low + rand()*(y_high - y_low))
         # Randomly choose a zoom factor (smaller means more zoomed in)
-        zoom = 10.0^rand(-8:-2)
+        zoom = 10.0^rand(-10:-8)
         x_offset = zoom * (x_high - x_low)
         
         x_min = real(center) - x_offset
@@ -86,7 +86,7 @@ function find_interesting_window(max_attempts=10000)
         grid = compute_mandelbrot_window(x_min, x_max, y_min, y_max, 200, 67, max_iter)
         (good, value) = is_interesting(grid, max_iter)
         if good
-            println("Found interesting window on attempt $attempt")
+            println("Found interesting window on attempt $attempt. Zoom was $zoom.")
             return (x_min, x_max, y_min, y_max)
         else
             if value > best_distance
