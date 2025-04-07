@@ -19,7 +19,7 @@ jobs:
           version: '1.9'  # Set your desired Julia version
 
       - name: Instantiate Julia Environment
-        run: julia -e 'using Pkg; Pkg.instantiate()'
+        run: julia --project="." -e 'using Pkg; Pkg.instantiate()'
 
       - name: Run fractal generation script
         run: julia --project="." fractal.jl
