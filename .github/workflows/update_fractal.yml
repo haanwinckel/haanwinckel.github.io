@@ -2,7 +2,7 @@ name: Update Fractal Background
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+    - cron: '0 8 * * 0'  # Runs weekly on Sundays at 08:00 UTC
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
@@ -32,6 +32,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git add header_background.png favicon.png
           if ! git diff-index --quiet HEAD --; then
-            git commit -m "Daily update of header background image [skip ci]"
+            git commit -m "Weekly update of header background image [skip ci]"
             git push
           fi
