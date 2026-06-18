@@ -1,0 +1,57 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Files</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+      background: #fff;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      color: #132265;
+      font-size: 2rem;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #0070c9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Files</h1>
+  <ul>
+    {% assign listed_files = site.static_files | sort: "path" %}
+    {% for file in listed_files %}
+      {% if file.path contains "/files/" %}
+        {% assign filename = file.path | split: "/" | last %}
+        <li><a href="{{ file.path | relative_url }}" download>{{ filename }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</body>
+</html>
